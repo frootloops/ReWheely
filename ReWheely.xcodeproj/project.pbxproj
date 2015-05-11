@@ -120,8 +120,7 @@
 				81FBE6871B00DC190060A0B1 /* Helpers */,
 				81FBE6881B00DC1F0060A0B1 /* Tests */,
 			);
-			name = UnitTests;
-			path = ReWheelyTests;
+			path = UnitTests;
 			sourceTree = "<group>";
 		};
 		816BF1141B00AB89006746D6 /* Resources */ = {
@@ -129,7 +128,7 @@
 			children = (
 				816BF1151B00AB89006746D6 /* Info.plist */,
 			);
-			name = Resources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		81FBE67F1B00DB400060A0B1 /* Frameworks */ = {
@@ -152,28 +151,28 @@
 			isa = PBXGroup;
 			children = (
 			);
-			name = Extensions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		81FBE6811B00DB920060A0B1 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Protocols;
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		81FBE6821B00DB9C0060A0B1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Models;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		81FBE6831B00DBA70060A0B1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = ViewModels;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		81FBE6841B00DBAF0060A0B1 /* Controllers */ = {
@@ -182,14 +181,14 @@
 				816BF1001B00AB88006746D6 /* AppDelegate.swift */,
 				816BF1021B00AB88006746D6 /* ViewController.swift */,
 			);
-			name = Controllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		81FBE6851B00DBB60060A0B1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Views;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		81FBE6861B00DBC10060A0B1 /* Resources */ = {
@@ -200,14 +199,14 @@
 				81FBE68A1B00DCE50060A0B1 /* Nibs */,
 				81FBE68B1B00DD130060A0B1 /* Other-Sources */,
 			);
-			name = Resources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		81FBE6871B00DC190060A0B1 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Helpers;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		81FBE6881B00DC1F0060A0B1 /* Tests */ = {
@@ -215,7 +214,7 @@
 			children = (
 				816BF1161B00AB89006746D6 /* ReWheelyTests.swift */,
 			);
-			name = Tests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		81FBE6891B00DCD10060A0B1 /* Storyboards */ = {
@@ -223,7 +222,7 @@
 			children = (
 				816BF1041B00AB89006746D6 /* Main.storyboard */,
 			);
-			name = Storyboards;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		81FBE68A1B00DCE50060A0B1 /* Nibs */ = {
@@ -231,7 +230,7 @@
 			children = (
 				816BF1091B00AB89006746D6 /* LaunchScreen.xib */,
 			);
-			name = Nibs;
+			path = Nibs;
 			sourceTree = "<group>";
 		};
 		81FBE68B1B00DD130060A0B1 /* Other-Sources */ = {
@@ -239,7 +238,7 @@
 			children = (
 				816BF0FF1B00AB88006746D6 /* Info.plist */,
 			);
-			name = "Other-Sources";
+			path = "Other-Sources";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,6 +398,7 @@
 				816BF1051B00AB89006746D6 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		816BF1091B00AB89006746D6 /* LaunchScreen.xib */ = {
@@ -407,6 +407,7 @@
 				816BF10A1B00AB89006746D6 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -502,7 +503,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = ReWheely/Info.plist;
+				INFOPLIST_FILE = "ReWheely/Resources/Other-Sources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -517,7 +518,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = ReWheely/Info.plist;
+				INFOPLIST_FILE = "ReWheely/Resources/Other-Sources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -535,7 +536,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = ReWheelyTests/Info.plist;
+				INFOPLIST_FILE = UnitTests/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReWheely.app/ReWheely";
@@ -550,7 +551,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = ReWheelyTests/Info.plist;
+				INFOPLIST_FILE = UnitTests/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReWheely.app/ReWheely";
