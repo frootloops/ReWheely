@@ -19,7 +19,9 @@
 		816BF1031B00AB88006746D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816BF1021B00AB88006746D6 /* ViewController.swift */; };
 		816BF1061B00AB89006746D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 816BF1041B00AB89006746D6 /* Main.storyboard */; };
 		816BF1081B00AB89006746D6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 816BF1071B00AB89006746D6 /* Images.xcassets */; };
-		816BF1171B00AB89006746D6 /* ReWheelyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816BF1161B00AB89006746D6 /* ReWheelyTests.swift */; };
+		816BF1171B00AB89006746D6 /* CarSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816BF1161B00AB89006746D6 /* CarSpec.swift */; };
+		81FBE6931B0102FE0060A0B1 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81FBE6921B0102FE0060A0B1 /* Quick.framework */; };
+		81FBE6951B01030A0060A0B1 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81FBE6941B01030A0060A0B1 /* Nimble.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +51,9 @@
 		816BF1071B00AB89006746D6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		816BF1101B00AB89006746D6 /* ReWheelyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReWheelyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		816BF1151B00AB89006746D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		816BF1161B00AB89006746D6 /* ReWheelyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReWheelyTests.swift; sourceTree = "<group>"; };
+		816BF1161B00AB89006746D6 /* CarSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarSpec.swift; sourceTree = "<group>"; };
+		81FBE6921B0102FE0060A0B1 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = SOURCE_ROOT; };
+		81FBE6941B01030A0060A0B1 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81FBE6951B01030A0060A0B1 /* Nimble.framework in Frameworks */,
+				81FBE6931B0102FE0060A0B1 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +138,8 @@
 		81FBE67F1B00DB400060A0B1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				81FBE6941B01030A0060A0B1 /* Nimble.framework */,
+				81FBE6921B0102FE0060A0B1 /* Quick.framework */,
 				81199C8D1B00D425006A07B4 /* Alamofire.framework */,
 				81199C8E1B00D425006A07B4 /* Argo.framework */,
 				81199C8F1B00D425006A07B4 /* Box.framework */,
@@ -210,7 +218,7 @@
 		81FBE6881B00DC1F0060A0B1 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				816BF1161B00AB89006746D6 /* ReWheelyTests.swift */,
+				816BF1161B00AB89006746D6 /* CarSpec.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -350,6 +358,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Runes.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
 			);
 			outputPaths = (
 			);
@@ -373,7 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				816BF1171B00AB89006746D6 /* ReWheelyTests.swift in Sources */,
+				816BF1171B00AB89006746D6 /* CarSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +529,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -539,6 +549,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = UnitTests/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
