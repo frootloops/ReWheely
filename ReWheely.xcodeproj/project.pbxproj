@@ -22,6 +22,10 @@
 		816BF1171B00AB89006746D6 /* CarSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816BF1161B00AB89006746D6 /* CarSpec.swift */; };
 		81FBE6931B0102FE0060A0B1 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81FBE6921B0102FE0060A0B1 /* Quick.framework */; };
 		81FBE6951B01030A0060A0B1 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81FBE6941B01030A0060A0B1 /* Nimble.framework */; };
+		81FBE6991B010E020060A0B1 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FBE6981B010E020060A0B1 /* Car.swift */; };
+		81FBE69A1B010E8C0060A0B1 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FBE6981B010E020060A0B1 /* Car.swift */; };
+		81FBE69B1B010EFB0060A0B1 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81199C941B00D425006A07B4 /* Runes.framework */; };
+		81FBE69C1B010F090060A0B1 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81199C8E1B00D425006A07B4 /* Argo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,7 @@
 		816BF1161B00AB89006746D6 /* CarSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarSpec.swift; sourceTree = "<group>"; };
 		81FBE6921B0102FE0060A0B1 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = SOURCE_ROOT; };
 		81FBE6941B01030A0060A0B1 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = SOURCE_ROOT; };
+		81FBE6981B010E020060A0B1 /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81FBE69C1B010F090060A0B1 /* Argo.framework in Frameworks */,
+				81FBE69B1B010EFB0060A0B1 /* Runes.framework in Frameworks */,
 				81FBE6951B01030A0060A0B1 /* Nimble.framework in Frameworks */,
 				81FBE6931B0102FE0060A0B1 /* Quick.framework in Frameworks */,
 			);
@@ -170,6 +177,7 @@
 		81FBE6821B00DB9C0060A0B1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				81FBE6981B010E020060A0B1 /* Car.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -375,6 +383,7 @@
 			files = (
 				816BF1031B00AB88006746D6 /* ViewController.swift in Sources */,
 				816BF1011B00AB88006746D6 /* AppDelegate.swift in Sources */,
+				81FBE6991B010E020060A0B1 /* Car.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81FBE69A1B010E8C0060A0B1 /* Car.swift in Sources */,
 				816BF1171B00AB89006746D6 /* CarSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
