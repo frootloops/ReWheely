@@ -1,0 +1,10 @@
+framework module FutureKit {
+  umbrella header "FutureKit.h"
+
+  export *
+  module * { export * }
+}
+
+module FutureKit.Swift {
+    header "FutureKit-Swift.h"
+}

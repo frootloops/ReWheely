@@ -1,0 +1,4 @@
+version: "Apple Swift version 1.2 (swiftlang-602.0.49.6 clang-602.0.49)"
+options: "fc7f4c9d0fd4de5ce799711d8df16bc8"
+inputs: 
+- "/Users/frootloops/code/wheely/ReWheely/Carthage/Checkouts/Dollar.swift/Dollar/Dollar/Dollar.swift"

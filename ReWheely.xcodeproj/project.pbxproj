@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81199C951B00D425006A07B4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81199C8D1B00D425006A07B4 /* Alamofire.framework */; };
+		81199C961B00D425006A07B4 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81199C8E1B00D425006A07B4 /* Argo.framework */; };
+		81199C971B00D425006A07B4 /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81199C8F1B00D425006A07B4 /* Box.framework */; };
+		81199C981B00D425006A07B4 /* Cent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81199C901B00D425006A07B4 /* Cent.framework */; };
+		81199C991B00D425006A07B4 /* Dollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81199C911B00D425006A07B4 /* Dollar.framework */; };
+		81199C9A1B00D425006A07B4 /* FutureKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81199C921B00D425006A07B4 /* FutureKit.framework */; };
+		81199C9B1B00D425006A07B4 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81199C931B00D425006A07B4 /* Result.framework */; };
+		81199C9C1B00D425006A07B4 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81199C941B00D425006A07B4 /* Runes.framework */; };
 		816BF1011B00AB88006746D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816BF1001B00AB88006746D6 /* AppDelegate.swift */; };
 		816BF1031B00AB88006746D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816BF1021B00AB88006746D6 /* ViewController.swift */; };
 		816BF1061B00AB89006746D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 816BF1041B00AB89006746D6 /* Main.storyboard */; };
@@ -26,6 +34,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		81199C8D1B00D425006A07B4 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = ../Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		81199C8E1B00D425006A07B4 /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = ../Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
+		81199C8F1B00D425006A07B4 /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = ../Carthage/Build/iOS/Box.framework; sourceTree = "<group>"; };
+		81199C901B00D425006A07B4 /* Cent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cent.framework; path = ../Carthage/Build/iOS/Cent.framework; sourceTree = "<group>"; };
+		81199C911B00D425006A07B4 /* Dollar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Dollar.framework; path = ../Carthage/Build/iOS/Dollar.framework; sourceTree = "<group>"; };
+		81199C921B00D425006A07B4 /* FutureKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FutureKit.framework; path = ../Carthage/Build/iOS/FutureKit.framework; sourceTree = "<group>"; };
+		81199C931B00D425006A07B4 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = ../Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		81199C941B00D425006A07B4 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = ../Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
 		816BF0FB1B00AB88006746D6 /* ReWheely.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReWheely.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		816BF0FF1B00AB88006746D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		816BF1001B00AB88006746D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +59,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81199C951B00D425006A07B4 /* Alamofire.framework in Frameworks */,
+				81199C961B00D425006A07B4 /* Argo.framework in Frameworks */,
+				81199C971B00D425006A07B4 /* Box.framework in Frameworks */,
+				81199C981B00D425006A07B4 /* Cent.framework in Frameworks */,
+				81199C991B00D425006A07B4 /* Dollar.framework in Frameworks */,
+				81199C9A1B00D425006A07B4 /* FutureKit.framework in Frameworks */,
+				81199C9B1B00D425006A07B4 /* Result.framework in Frameworks */,
+				81199C9C1B00D425006A07B4 /* Runes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,8 +84,9 @@
 			isa = PBXGroup;
 			children = (
 				816BF0FD1B00AB88006746D6 /* ReWheely */,
-				816BF1131B00AB89006746D6 /* ReWheelyTests */,
+				816BF1131B00AB89006746D6 /* UnitTests */,
 				816BF0FC1B00AB88006746D6 /* Products */,
+				81FBE67F1B00DB400060A0B1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,39 +102,144 @@
 		816BF0FD1B00AB88006746D6 /* ReWheely */ = {
 			isa = PBXGroup;
 			children = (
-				816BF1001B00AB88006746D6 /* AppDelegate.swift */,
-				816BF1021B00AB88006746D6 /* ViewController.swift */,
-				816BF1041B00AB89006746D6 /* Main.storyboard */,
-				816BF1071B00AB89006746D6 /* Images.xcassets */,
-				816BF1091B00AB89006746D6 /* LaunchScreen.xib */,
-				816BF0FE1B00AB88006746D6 /* Supporting Files */,
+				81FBE6801B00DB880060A0B1 /* Extensions */,
+				81FBE6811B00DB920060A0B1 /* Protocols */,
+				81FBE6821B00DB9C0060A0B1 /* Models */,
+				81FBE6831B00DBA70060A0B1 /* ViewModels */,
+				81FBE6841B00DBAF0060A0B1 /* Controllers */,
+				81FBE6851B00DBB60060A0B1 /* Views */,
+				81FBE6861B00DBC10060A0B1 /* Resources */,
 			);
 			path = ReWheely;
 			sourceTree = "<group>";
 		};
-		816BF0FE1B00AB88006746D6 /* Supporting Files */ = {
+		816BF1131B00AB89006746D6 /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				816BF0FF1B00AB88006746D6 /* Info.plist */,
+				816BF1141B00AB89006746D6 /* Resources */,
+				81FBE6871B00DC190060A0B1 /* Helpers */,
+				81FBE6881B00DC1F0060A0B1 /* Tests */,
 			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		816BF1131B00AB89006746D6 /* ReWheelyTests */ = {
-			isa = PBXGroup;
-			children = (
-				816BF1161B00AB89006746D6 /* ReWheelyTests.swift */,
-				816BF1141B00AB89006746D6 /* Supporting Files */,
-			);
+			name = UnitTests;
 			path = ReWheelyTests;
 			sourceTree = "<group>";
 		};
-		816BF1141B00AB89006746D6 /* Supporting Files */ = {
+		816BF1141B00AB89006746D6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				816BF1151B00AB89006746D6 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		81FBE67F1B00DB400060A0B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				81199C8D1B00D425006A07B4 /* Alamofire.framework */,
+				81199C8E1B00D425006A07B4 /* Argo.framework */,
+				81199C8F1B00D425006A07B4 /* Box.framework */,
+				81199C901B00D425006A07B4 /* Cent.framework */,
+				81199C911B00D425006A07B4 /* Dollar.framework */,
+				81199C921B00D425006A07B4 /* FutureKit.framework */,
+				81199C931B00D425006A07B4 /* Result.framework */,
+				81199C941B00D425006A07B4 /* Runes.framework */,
+			);
+			name = Frameworks;
+			path = ReWheely;
+			sourceTree = "<group>";
+		};
+		81FBE6801B00DB880060A0B1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		81FBE6811B00DB920060A0B1 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		81FBE6821B00DB9C0060A0B1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		81FBE6831B00DBA70060A0B1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		81FBE6841B00DBAF0060A0B1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				816BF1001B00AB88006746D6 /* AppDelegate.swift */,
+				816BF1021B00AB88006746D6 /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		81FBE6851B00DBB60060A0B1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		81FBE6861B00DBC10060A0B1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				816BF1071B00AB89006746D6 /* Images.xcassets */,
+				81FBE6891B00DCD10060A0B1 /* Storyboards */,
+				81FBE68A1B00DCE50060A0B1 /* Nibs */,
+				81FBE68B1B00DD130060A0B1 /* Other-Sources */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		81FBE6871B00DC190060A0B1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		81FBE6881B00DC1F0060A0B1 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				816BF1161B00AB89006746D6 /* ReWheelyTests.swift */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		81FBE6891B00DCD10060A0B1 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				816BF1041B00AB89006746D6 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		81FBE68A1B00DCE50060A0B1 /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				816BF1091B00AB89006746D6 /* LaunchScreen.xib */,
+			);
+			name = Nibs;
+			sourceTree = "<group>";
+		};
+		81FBE68B1B00DD130060A0B1 /* Other-Sources */ = {
+			isa = PBXGroup;
+			children = (
+				816BF0FF1B00AB88006746D6 /* Info.plist */,
+			);
+			name = "Other-Sources";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +252,7 @@
 				816BF0F71B00AB88006746D6 /* Sources */,
 				816BF0F81B00AB88006746D6 /* Frameworks */,
 				816BF0F91B00AB88006746D6 /* Resources */,
+				81199C9E1B00D481006A07B4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -207,6 +338,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		81199C9E1B00D481006A07B4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Argo.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Box.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Cent.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Dollar.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/FutureKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Runes.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		816BF0F71B00AB88006746D6 /* Sources */ = {
@@ -342,6 +498,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ReWheely/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -353,6 +513,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ReWheely/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -412,6 +576,7 @@
 				816BF11C1B00AB89006746D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		816BF11D1B00AB89006746D6 /* Build configuration list for PBXNativeTarget "ReWheelyTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +585,7 @@
 				816BF11F1B00AB89006746D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
