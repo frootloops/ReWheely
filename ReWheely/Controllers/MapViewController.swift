@@ -19,6 +19,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var currentLocationButton: UIButton!
     @IBOutlet weak var estimatedTimeLabel: UILabel!
     
+    private let api = WheelyApi.sharedInstance
     private var firstLaunch = true
     
     override func viewDidLoad() {
@@ -48,14 +49,26 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         firstLaunch = false
         let coordinate = userLocation.location.coordinate
         setRegion(coordinate)
+        
+        api.getCarsNearWith(coordinate, success: didGetCars, failure: { error in
+            1;
+        })
     }
     
     func mapView(mapView: MKMapView!, regionDidChangeAnimated animated: Bool) {
         showcurrentLocationButtonIfNeeded()
     }
     
+    func didGetCars(cars: [Car], eta: Double?) {
+        
+        if let wait = eta {
+            estimatedTimeLabel.text = "Est. arrival in \(Int(wait / 60)) mins"
+        }
+    }
+    
     
     // pragma - Private area
+    
     
     private func configureView() {
         let nav = self.navigationController!.navigationBar

@@ -2,4 +2,177 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ReWheely/Models/WheelyApi.swift"
+            timestampString = "453159534.272353"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "WheelyApi"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ReWheely.WheelyApi.beforeRequest.getter : Swift.Optional&lt;() -&gt; ()&gt;"
+                  moduleName = "ReWheely"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/frootloops/code/wheely/ReWheely/ReWheely/Models/WheelyApi.swift"
+                  timestampString = "453159534.297694"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ReWheely.WheelyApi.beforeRequest.setter : Swift.Optional&lt;() -&gt; ()&gt;"
+                  moduleName = "ReWheely"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/frootloops/code/wheely/ReWheely/ReWheely/Models/WheelyApi.swift"
+                  timestampString = "453159534.298145"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ReWheely.WheelyApi.beforeRequest.materializeForSet : Swift.Optional&lt;() -&gt; ()&gt;"
+                  moduleName = "ReWheely"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/frootloops/code/wheely/ReWheely/ReWheely/Models/WheelyApi.swift"
+                  timestampString = "453159534.298425"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ReWheely.WheelyApi.init (ReWheely.WheelyApi.Type)() -&gt; ReWheely.WheelyApi"
+                  moduleName = "ReWheely"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/frootloops/code/wheely/ReWheely/ReWheely/Models/WheelyApi.swift"
+                  timestampString = "453159534.298687"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ReWheely/Controllers/MapViewController.swift"
+            timestampString = "453160425.95159"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "MapViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ReWheely.MapViewController.estimatedTimeLabel.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UILabel&gt;"
+                  moduleName = "ReWheely"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/frootloops/code/wheely/ReWheely/ReWheely/Controllers/MapViewController.swift"
+                  timestampString = "453160425.979468"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ReWheely.MapViewController.estimatedTimeLabel.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UILabel&gt;"
+                  moduleName = "ReWheely"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/frootloops/code/wheely/ReWheely/ReWheely/Controllers/MapViewController.swift"
+                  timestampString = "453160425.979724"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ReWheely.MapViewController.estimatedTimeLabel.materializeForSet : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UILabel&gt;"
+                  moduleName = "ReWheely"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/frootloops/code/wheely/ReWheely/ReWheely/Controllers/MapViewController.swift"
+                  timestampString = "453160425.97989"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ReWheely.MapViewController.init (ReWheely.MapViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; ReWheely.MapViewController"
+                  moduleName = "ReWheely"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/frootloops/code/wheely/ReWheely/ReWheely/Controllers/MapViewController.swift"
+                  timestampString = "453160425.98006"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "448">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ReWheely.MapViewController.init (ReWheely.MapViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; ReWheely.MapViewController"
+                  moduleName = "ReWheely"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/frootloops/code/wheely/ReWheely/ReWheely/Controllers/MapViewController.swift"
+                  timestampString = "453160425.980228"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "408">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
