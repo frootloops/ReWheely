@@ -44,14 +44,14 @@
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PinPickup" translatesAutoresizingMaskIntoConstraints="NO" id="4qt-Q0-Ub1">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="65"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PinPickupCircleLoading" translatesAutoresizingMaskIntoConstraints="NO" id="KwV-LU-VKj">
-                                        <rect key="frame" x="9" y="11" width="28" height="28"/>
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PinPickupCircleLoading" translatesAutoresizingMaskIntoConstraints="NO" id="KwV-LU-VKj">
+                                        <rect key="frame" x="9" y="12" width="28" height="28"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="5SB-hr-onx" secondAttribute="trailing" id="3Bt-lS-J9R"/>
-                                    <constraint firstItem="KwV-LU-VKj" firstAttribute="top" secondItem="mdD-3k-xqe" secondAttribute="top" constant="11" id="Pxl-m1-zeA"/>
+                                    <constraint firstItem="KwV-LU-VKj" firstAttribute="top" secondItem="mdD-3k-xqe" secondAttribute="top" constant="12" id="Pxl-m1-zeA"/>
                                     <constraint firstItem="5SB-hr-onx" firstAttribute="leading" secondItem="mdD-3k-xqe" secondAttribute="leading" id="emh-dU-FoR"/>
                                     <constraint firstItem="KwV-LU-VKj" firstAttribute="leading" secondItem="mdD-3k-xqe" secondAttribute="leading" constant="9" id="g1l-NR-e8m"/>
                                     <constraint firstAttribute="width" constant="64" id="h0h-sm-jb5"/>

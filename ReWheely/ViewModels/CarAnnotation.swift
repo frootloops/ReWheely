@@ -11,7 +11,7 @@ import MapKit
 class CarAnnotation: MKPointAnnotation {
     var car: Car!
     
-    init(car: Car) {
+    init(_ car: Car) {
         super.init()
         self.car = car
         self.coordinate = car.coordinate()
