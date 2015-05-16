@@ -22,6 +22,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var currentLocationButton: UIButton!
     @IBOutlet weak var estimatedTimeLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
     
     private let api = WheelyApi.sharedInstance
     private var firstLaunch = true
@@ -31,6 +32,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         }
     }
     private var timer = NSTimer()
+    private let geocoder = CLGeocoder()
     
     override func viewDidLoad() {
         configureView()
@@ -68,14 +70,16 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         pinLoadingView.alpha = 1
         
         timer.invalidate()
+        addressLabel.text = "Go To Pin"
     }
 
     
     func mapView(mapView: MKMapView!, regionDidChangeAnimated animated: Bool) {
         showcurrentLocationButtonIfNeeded()
-        
+
         let coordinate = mapView.centerCoordinate
         api.getCarsNearWith(coordinate, success: didGetCars, failure: errorHandler)
+        geocodeAddress(coordinate)
     }
     
     func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
@@ -152,49 +156,66 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
     
     private func presentCars(newCars: [Car], oldCars: [Car]) {
-                let newCarIds = Set(newCars.map { $0.id } )
-                let oldCarIds = Set(oldCars.map { $0.id } )
+        let newCarIds = Set(newCars.map { $0.id } )
+        let oldCarIds = Set(oldCars.map { $0.id } )
         
-                let needToInsert = newCarIds.subtract(oldCarIds)
-                let needToUpdate = newCarIds.intersect(oldCarIds)
-                let needToRemove = oldCarIds.subtract(newCarIds)
+        let needToInsert = newCarIds.subtract(oldCarIds)
+        let needToUpdate = newCarIds.intersect(oldCarIds)
+        let needToRemove = oldCarIds.subtract(newCarIds)
         
-                // Create
-                let newCarAnnotaions = newCars.filter { needToInsert.contains($0.id) }.map { CarAnnotation($0) }
-                mapView.addAnnotations(newCarAnnotaions)
-                        println("New: \(newCarAnnotaions.count)")
+        // Create
+        let newCarAnnotaions = newCars.filter { needToInsert.contains($0.id) }.map { CarAnnotation($0) }
+        mapView.addAnnotations(newCarAnnotaions)
         
-                // Remove
-                let removeCarAnnotaions: [CarAnnotation] = mapView.annotations
-                    .filter { $0 is CarAnnotation }
-                    .filter { needToRemove.contains(($0 as! CarAnnotation).car.id) }
-                    .map { $0 as! CarAnnotation }
+        // Remove
+        let removeCarAnnotaions: [CarAnnotation] = mapView.annotations
+            .filter { $0 is CarAnnotation }
+            .filter { needToRemove.contains(($0 as! CarAnnotation).car.id) }
+            .map { $0 as! CarAnnotation }
         
-                for annotation in removeCarAnnotaions {
-                    let view = mapView.viewForAnnotation(annotation) as? CarAnnotationView
-                    UIView.animateWithDuration(0.3, animations: { () -> Void in
-                        view?.alpha = 0
-                    }, completion: { (completed) -> Void in
-                        self.mapView.removeAnnotation(annotation)
-                    })
-                }
+        for annotation in removeCarAnnotaions {
+            let view = mapView.viewForAnnotation(annotation) as? CarAnnotationView
+            UIView.animateWithDuration(0.3, animations: { () -> Void in
+                view?.alpha = 0
+                }, completion: { (completed) -> Void in
+                    self.mapView.removeAnnotation(annotation)
+            })
+        }
         
-                // Update
-                let updateCarAnnotaions: [CarAnnotation] = mapView.annotations
-                    .filter { $0 is CarAnnotation }
-                    .filter { needToUpdate.contains(($0 as! CarAnnotation).car.id) }
-                    .map { $0 as! CarAnnotation }
+        // Update
+        let updateCarAnnotaions: [CarAnnotation] = mapView.annotations
+            .filter { $0 is CarAnnotation }
+            .filter { needToUpdate.contains(($0 as! CarAnnotation).car.id) }
+            .map { $0 as! CarAnnotation }
         
-                for annotation in updateCarAnnotaions {
-                    let newCar = newCars.filter { $0.id == annotation.car.id }.first!
-                    annotation.car = newCar
-                    let view = mapView.viewForAnnotation(annotation) as? CarAnnotationView
-                    
-                    UIView.animateWithDuration(0.3, animations: {
-                        annotation.coordinate = newCar.coordinate()
-                        view?.update()
-                    })
-                }
+        for annotation in updateCarAnnotaions {
+            let newCar = newCars.filter { $0.id == annotation.car.id }.first!
+            annotation.car = newCar
+            let view = mapView.viewForAnnotation(annotation) as? CarAnnotationView
+            
+            UIView.animateWithDuration(0.3, animations: {
+                annotation.coordinate = newCar.coordinate()
+                view?.update()
+            })
+        }
+    }
+    
+    private func geocodeAddress(coordinate: CLLocationCoordinate2D) {
+        if (geocoder.geocoding) {
+            geocoder.cancelGeocode()
+        }
+        
+        let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
+        
+        geocoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, error) -> Void in
+            if (error != nil) { return }
+            if (placemarks.count == 0) { return }
+            
+
+            if let placemark = placemarks[0] as? CLPlacemark {
+                self.addressLabel.text = placemark.name
+            }
+        })
     }
     
     private func configureApi() {
@@ -208,7 +229,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     private func configureBackgroundUpdate() {
         if (!timer.valid) {
-            timer = NSTimer.scheduledTimerWithTimeInterval(3, target: self,
+            timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self,
                 selector: "backgroundUpdate", userInfo: nil, repeats: false)
         }
     }

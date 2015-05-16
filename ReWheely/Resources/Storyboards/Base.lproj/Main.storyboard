@@ -31,11 +31,8 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="M98-Bk-VCa" kind="showDetail" id="vpP-iQ-fM0"/>
-                                </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mdD-3k-xqe">
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mdD-3k-xqe">
                                 <rect key="frame" x="268" y="267" width="64" height="65"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PinPickupBody" translatesAutoresizingMaskIntoConstraints="NO" id="5SB-hr-onx">
@@ -84,12 +81,29 @@
                                         <rect key="frame" x="53" y="1" width="506" height="80"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Est. arrival in..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sQ-gc-J2E">
-                                                <rect key="frame" x="148" y="59" width="210" height="16"/>
+                                                <rect key="frame" x="209" y="59" width="88" height="18"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="210" id="ZBY-ct-kwG"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="ZBY-ct-kwG"/>
+                                                    </mask>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pickup Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CT7-fd-2gz">
+                                                <rect key="frame" x="202" y="8" width="102" height="17"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                                <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go To Pin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srI-fT-jud">
+                                                <rect key="frame" x="214" y="33" width="79" height="21"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -97,7 +111,11 @@
                                         <constraints>
                                             <constraint firstItem="7sQ-gc-J2E" firstAttribute="top" secondItem="yCL-bg-zfa" secondAttribute="top" constant="59" id="Bzc-90-zxh"/>
                                             <constraint firstItem="7sQ-gc-J2E" firstAttribute="centerX" secondItem="yCL-bg-zfa" secondAttribute="centerX" id="P0n-pZ-3CP"/>
-                                            <constraint firstItem="7sQ-gc-J2E" firstAttribute="bottom" secondItem="yCL-bg-zfa" secondAttribute="bottomMargin" constant="3" id="fWV-CL-cJs"/>
+                                            <constraint firstAttribute="centerX" secondItem="srI-fT-jud" secondAttribute="centerX" id="b8s-WZ-hdc"/>
+                                            <constraint firstItem="7sQ-gc-J2E" firstAttribute="bottom" secondItem="yCL-bg-zfa" secondAttribute="bottomMargin" constant="5" id="fWV-CL-cJs"/>
+                                            <constraint firstAttribute="centerX" secondItem="CT7-fd-2gz" secondAttribute="centerX" id="mkg-07-IWj"/>
+                                            <constraint firstItem="CT7-fd-2gz" firstAttribute="top" secondItem="yCL-bg-zfa" secondAttribute="top" constant="8" id="pH7-G2-7Ea"/>
+                                            <constraint firstItem="srI-fT-jud" firstAttribute="top" secondItem="CT7-fd-2gz" secondAttribute="bottom" constant="8" id="rtV-GD-ZVC"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -154,6 +172,7 @@
                         <barButtonItem key="leftBarButtonItem" image="IconMenu" id="vz2-VE-yFm"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="addressLabel" destination="srI-fT-jud" id="5bg-dh-ocj"/>
                         <outlet property="currentLocationButton" destination="XP7-Qo-4sF" id="SA0-5i-OAB"/>
                         <outlet property="estimatedTimeLabel" destination="7sQ-gc-J2E" id="MgN-4H-bV6"/>
                         <outlet property="headerView" destination="SBQ-1r-hIo" id="L4s-I9-Ldn"/>
