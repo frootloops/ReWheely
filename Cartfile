@@ -7,3 +7,4 @@ github "onevcat/Kingfisher" >= 1.4
 github "Quick/Quick"
 github "Quick/Nimble"
 github "SwiftyJSON/SwiftyJSON"
+github "appsquickly/Typhoon"
