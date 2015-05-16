@@ -15,6 +15,7 @@
 		81199C9A1B00D425006A07B4 /* FutureKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81199C921B00D425006A07B4 /* FutureKit.framework */; };
 		81199C9B1B00D425006A07B4 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81199C931B00D425006A07B4 /* Result.framework */; };
 		81199C9C1B00D425006A07B4 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81199C941B00D425006A07B4 /* Runes.framework */; };
+		8127AC0A1B07473100A13E1F /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8127AC091B07473100A13E1F /* UIViewExtensions.swift */; };
 		816BF1011B00AB88006746D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816BF1001B00AB88006746D6 /* AppDelegate.swift */; };
 		816BF1061B00AB89006746D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 816BF1041B00AB89006746D6 /* Main.storyboard */; };
 		816BF1081B00AB89006746D6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 816BF1071B00AB89006746D6 /* Images.xcassets */; };
@@ -51,6 +52,7 @@
 		81199C921B00D425006A07B4 /* FutureKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FutureKit.framework; path = ../Carthage/Build/iOS/FutureKit.framework; sourceTree = "<group>"; };
 		81199C931B00D425006A07B4 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = ../Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		81199C941B00D425006A07B4 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = ../Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
+		8127AC091B07473100A13E1F /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewExtensions.swift; path = ReWheely/UIViewExtensions.swift; sourceTree = SOURCE_ROOT; };
 		816BF0FB1B00AB88006746D6 /* ReWheely.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReWheely.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		816BF0FF1B00AB88006746D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		816BF1001B00AB88006746D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 		81FBE6801B00DB880060A0B1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8127AC091B07473100A13E1F /* UIViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81FBE6A21B014E710060A0B1 /* MapViewController.swift in Sources */,
+				8127AC0A1B07473100A13E1F /* UIViewExtensions.swift in Sources */,
 				81FBE6A01B014D6A0060A0B1 /* CarAnnotationView.swift in Sources */,
 				81A3DE921B0277C600D66E2F /* WheelyApi.swift in Sources */,
 				816BF1011B00AB88006746D6 /* AppDelegate.swift in Sources */,

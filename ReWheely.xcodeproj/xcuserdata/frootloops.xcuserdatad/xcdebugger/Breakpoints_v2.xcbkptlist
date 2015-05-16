@@ -88,11 +88,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ReWheely/Controllers/MapViewController.swift"
-            timestampString = "453160425.95159"
+            timestampString = "453461483.59424"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "MapViewController"
             landmarkType = "3">
             <Locations>

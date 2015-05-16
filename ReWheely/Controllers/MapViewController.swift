@@ -9,11 +9,23 @@
 import UIKit
 import MapKit
 
+
+
 class MapViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var requestDriver: UIButton!
     @IBOutlet weak var pinView: UIView!
-    @IBOutlet weak var pinLoadingView: UIImageView!
+    @IBOutlet weak var pinLoadingView: UIImageView! {
+        didSet {
+            let animation = CABasicAnimation(keyPath: "transform.rotation.z")
+            animation.toValue = M_PI_2
+            animation.duration = 1
+            animation.cumulative = true
+            animation.repeatCount = Float(CGFloat.max)
+            
+            pinLoadingView.layer.addAnimation(animation, forKey: "pinRotation")
+        }
+    }
     @IBOutlet weak var pinLoadedView: UIImageView!
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var currentLocationButton: UIButton!
@@ -60,17 +72,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
     
     func mapView(mapView: MKMapView!, regionWillChangeAnimated animated: Bool) {
-        
-        if (pinLoadingView.layer.animationForKey("pinRotation") == nil) {
-            let animation = CABasicAnimation(keyPath: "transform.rotation.z")
-            animation.toValue = M_PI_2
-            animation.duration = 1
-            animation.cumulative = true
-            animation.repeatCount = Float(CGFloat.max)
-            
-            pinLoadingView.layer.addAnimation(animation, forKey: "pinRotation")
-        }
-        
         pinLoadedView.alpha = 0
         pinLoadingView.alpha = 1
     }
@@ -108,7 +109,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
     
     internal func backgroundUpdate() {
-        NSLog("FUCK")
         let coordinate = mapView.centerCoordinate
         api.getCarsNearWith(coordinate, success: didGetCars, failure: errorHandler)
     }
