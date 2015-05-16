@@ -9,21 +9,13 @@
 import UIKit
 import MapKit
 
-
-
 class MapViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var requestDriver: UIButton!
     @IBOutlet weak var pinView: UIView!
     @IBOutlet weak var pinLoadingView: UIImageView! {
         didSet {
-            let animation = CABasicAnimation(keyPath: "transform.rotation.z")
-            animation.toValue = M_PI_2
-            animation.duration = 1
-            animation.cumulative = true
-            animation.repeatCount = Float(CGFloat.max)
-            
-            pinLoadingView.layer.addAnimation(animation, forKey: "pinRotation")
+            pinLoadingView.rotation()
         }
     }
     @IBOutlet weak var pinLoadedView: UIImageView!
@@ -74,6 +66,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     func mapView(mapView: MKMapView!, regionWillChangeAnimated animated: Bool) {
         pinLoadedView.alpha = 0
         pinLoadingView.alpha = 1
+        
+        timer.invalidate()
     }
 
     
@@ -157,18 +151,56 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     }
     
-    private func presentCars(cars: [Car]?, oldCars: [Car]?) {
-        if let newCars = cars {
-            mapView.removeAnnotations(mapView.annotations)
-            mapView.addAnnotations(newCars.map{ CarAnnotation($0) })
-        }
+    private func presentCars(newCars: [Car], oldCars: [Car]) {
+                let newCarIds = Set(newCars.map { $0.id } )
+                let oldCarIds = Set(oldCars.map { $0.id } )
+        
+                let needToInsert = newCarIds.subtract(oldCarIds)
+                let needToUpdate = newCarIds.intersect(oldCarIds)
+                let needToRemove = oldCarIds.subtract(newCarIds)
+        
+                // Create
+                let newCarAnnotaions = newCars.filter { needToInsert.contains($0.id) }.map { CarAnnotation($0) }
+                mapView.addAnnotations(newCarAnnotaions)
+                        println("New: \(newCarAnnotaions.count)")
+        
+                // Remove
+                let removeCarAnnotaions: [CarAnnotation] = mapView.annotations
+                    .filter { $0 is CarAnnotation }
+                    .filter { needToRemove.contains(($0 as! CarAnnotation).car.id) }
+                    .map { $0 as! CarAnnotation }
+        
+                for annotation in removeCarAnnotaions {
+                    let view = mapView.viewForAnnotation(annotation) as? CarAnnotationView
+                    UIView.animateWithDuration(0.3, animations: { () -> Void in
+                        view?.alpha = 0
+                    }, completion: { (completed) -> Void in
+                        self.mapView.removeAnnotation(annotation)
+                    })
+                }
+        
+                // Update
+                let updateCarAnnotaions: [CarAnnotation] = mapView.annotations
+                    .filter { $0 is CarAnnotation }
+                    .filter { needToUpdate.contains(($0 as! CarAnnotation).car.id) }
+                    .map { $0 as! CarAnnotation }
+        
+                for annotation in updateCarAnnotaions {
+                    let newCar = newCars.filter { $0.id == annotation.car.id }.first!
+                    annotation.car = newCar
+                    let view = mapView.viewForAnnotation(annotation) as? CarAnnotationView
+                    
+                    UIView.animateWithDuration(0.3, animations: {
+                        annotation.coordinate = newCar.coordinate()
+                        view?.update()
+                    })
+                }
     }
     
     private func configureApi() {
         api.afterRequest = {
             self.pinLoadingView.alpha = 0
             self.pinLoadedView.alpha = 1
-            self.pinLoadingView.layer.removeAllAnimations()
             
             self.configureBackgroundUpdate()
         }

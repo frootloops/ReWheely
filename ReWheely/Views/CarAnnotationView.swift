@@ -37,27 +37,34 @@ class CarAnnotationView: MKAnnotationView {
         rotateView.addSubview(maskImage)
         
         overlayImage = UIImageView(frame: CGRectMake(0, 0, 70, 70))
-        overlayImage.image = UIImage(named: "PinCarOverlayDark")!.imageWithRenderingMode(.AlwaysTemplate)
+        overlayImage.image = UIImage(named: "PinCarOverlayDark")
         overlayImage.contentMode = .Center
         rotateView.addSubview(overlayImage)
         
         whiteImage = UIImageView(frame: CGRectMake(0, 0, 70, 70))
-        whiteImage.image = UIImage(named: "PinCarOverlayLight")!.imageWithRenderingMode(.AlwaysTemplate)
+        whiteImage.image = UIImage(named: "PinCarOverlayLight")
         whiteImage.contentMode = .Center
         rotateView.addSubview(whiteImage)
     }
     
     internal func update() {
         if let carAnnotation = self.annotation as? CarAnnotation {
-            if let bearing = carAnnotation.car.bearing {
+            let car = carAnnotation.car
+            if let bearing = car.bearing {
                 let angle = CGFloat(bearing * M_PI / 180.0 + M_PI_2 + M_PI)
-                self.rotateView?.transform = CGAffineTransformMakeRotation(angle)
+                self.rotateView!.transform = CGAffineTransformMakeRotation(angle)
             }
             
-            self.maskImage.hidden = false
-            self.overlayImage?.hidden = false
-            self.whiteImage?.hidden = true
-            self.maskImage.tintColor = UIColor.blackColor()
+            if (car.color.uppercaseString == "FFFFFF") {
+                self.maskImage.hidden = true
+                self.overlayImage.hidden = true
+                self.whiteImage.hidden = false
+            } else {
+                self.maskImage.hidden = false
+                self.overlayImage.hidden = false
+                self.whiteImage.hidden = true
+                self.maskImage.tintColor = UIColor(rgba: "#\(car.color)")
+            }
         }
     }
     
