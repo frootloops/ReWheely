@@ -16,32 +16,33 @@ class CarAnnotationView: MKAnnotationView {
         }
     }
     
-    private var rotateView: UIView!,
-    maskImage: UIImageView!,
-    overlayImage: UIImageView!,
-    whiteImage: UIImageView!
+    private var rotateView: UIView!
+    private var maskImage: UIImageView!
+    private var overlayImage: UIImageView!
+    private var whiteImage: UIImageView!
+    private let carFrame = CGRectMake(0, 0, 70, 70)
     
     override init!(annotation: MKAnnotation!, reuseIdentifier: String!) {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
     }
     
     override init(frame: CGRect) {
-        super.init(frame: CGRectMake(0, 0, 70, 70))
+        super.init(frame: carFrame)
         
-        rotateView = UIView(frame: CGRectMake(0, 0, 70, 70))
+        rotateView = UIView(frame: carFrame)
         addSubview(rotateView)
         
-        maskImage = UIImageView(frame: CGRectMake(0, 0, 70, 70))
+        maskImage = UIImageView(frame: carFrame)
         maskImage.image = UIImage(named: "PinCarMask")!.imageWithRenderingMode(.AlwaysTemplate)
         maskImage.contentMode = .Center
         rotateView.addSubview(maskImage)
         
-        overlayImage = UIImageView(frame: CGRectMake(0, 0, 70, 70))
+        overlayImage = UIImageView(frame: carFrame)
         overlayImage.image = UIImage(named: "PinCarOverlayDark")
         overlayImage.contentMode = .Center
         rotateView.addSubview(overlayImage)
         
-        whiteImage = UIImageView(frame: CGRectMake(0, 0, 70, 70))
+        whiteImage = UIImageView(frame: carFrame)
         whiteImage.image = UIImage(named: "PinCarOverlayLight")
         whiteImage.contentMode = .Center
         rotateView.addSubview(whiteImage)
@@ -59,6 +60,7 @@ class CarAnnotationView: MKAnnotationView {
                 self.maskImage.hidden = true
                 self.overlayImage.hidden = true
                 self.whiteImage.hidden = false
+                self.whiteImage.tintColor = UIColor.whiteColor()
             } else {
                 self.maskImage.hidden = false
                 self.overlayImage.hidden = false

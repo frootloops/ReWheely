@@ -34,7 +34,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     private var timer = NSTimer()
     private let geocoder = CLGeocoder()
     
-    override func viewDidLoad() {
+    internal override func viewDidLoad() {
         configureView()
         configureMap()
         configureApi()
@@ -43,7 +43,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
     }
     
-    // pragma - Actions
+    // MARK - Actions
     
     @IBAction func returnToCurrentLocation() {
         mapView.setCenterCoordinate(mapView.userLocation.coordinate, animated: true)
@@ -53,7 +53,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         })
     }
     
-    // pragma - MapKit
+    // MARK - MapKit
     
     func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
         if (!firstLaunch) { return }
@@ -96,7 +96,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         return .None
     }
     
-    // pragma - Update
+    // MARK - Update
     
     internal func didGetCars(cars: [Car], eta: Double?) {
         self.cars = cars
@@ -111,7 +111,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         api.getCarsNearWith(coordinate, success: didGetCars, failure: errorHandler)
     }
     
-    // pragma - Private area
+    // MARK - Private area
     
     private func configureView() {
         let nav = self.navigationController!.navigationBar
@@ -175,7 +175,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         for annotation in removeCarAnnotaions {
             let view = mapView.viewForAnnotation(annotation) as? CarAnnotationView
-            UIView.animateWithDuration(0.3, animations: { () -> Void in
+            UIView.animateWithDuration(0.3, animations: {
                 view?.alpha = 0
                 }, completion: { (completed) -> Void in
                     self.mapView.removeAnnotation(annotation)
@@ -206,7 +206,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         }
         
         let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
-        
         geocoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, error) -> Void in
             if (error != nil) { return }
             if (placemarks.count == 0) { return }
@@ -229,7 +228,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     private func configureBackgroundUpdate() {
         if (!timer.valid) {
-            timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self,
+            timer = NSTimer.scheduledTimerWithTimeInterval(10, target: self,
                 selector: "backgroundUpdate", userInfo: nil, repeats: false)
         }
     }
