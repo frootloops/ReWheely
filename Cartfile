@@ -1,10 +1,5 @@
 github "thoughtbot/Argo"
-github "antitypical/Result"
-github "ankurp/Dollar.swift" ~> 3.0.0
-github "FutureKit/FutureKit"
 github "Alamofire/Alamofire" >= 1.2
-github "onevcat/Kingfisher" >= 1.4
 github "Quick/Quick"
 github "Quick/Nimble"
 github "SwiftyJSON/SwiftyJSON"
-github "appsquickly/Typhoon"

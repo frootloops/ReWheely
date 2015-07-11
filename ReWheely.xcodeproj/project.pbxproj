@@ -10,10 +10,6 @@
 		81199C951B00D425006A07B4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81199C8D1B00D425006A07B4 /* Alamofire.framework */; };
 		81199C961B00D425006A07B4 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81199C8E1B00D425006A07B4 /* Argo.framework */; };
 		81199C971B00D425006A07B4 /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81199C8F1B00D425006A07B4 /* Box.framework */; };
-		81199C981B00D425006A07B4 /* Cent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81199C901B00D425006A07B4 /* Cent.framework */; };
-		81199C991B00D425006A07B4 /* Dollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81199C911B00D425006A07B4 /* Dollar.framework */; };
-		81199C9A1B00D425006A07B4 /* FutureKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81199C921B00D425006A07B4 /* FutureKit.framework */; };
-		81199C9B1B00D425006A07B4 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81199C931B00D425006A07B4 /* Result.framework */; };
 		81199C9C1B00D425006A07B4 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81199C941B00D425006A07B4 /* Runes.framework */; };
 		8127AC0A1B07473100A13E1F /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8127AC091B07473100A13E1F /* UIViewExtensions.swift */; };
 		81468D981B07892100FD402D /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81468D971B07892100FD402D /* UIColorExtension.swift */; };
@@ -83,10 +79,6 @@
 				81199C951B00D425006A07B4 /* Alamofire.framework in Frameworks */,
 				81199C961B00D425006A07B4 /* Argo.framework in Frameworks */,
 				81199C971B00D425006A07B4 /* Box.framework in Frameworks */,
-				81199C981B00D425006A07B4 /* Cent.framework in Frameworks */,
-				81199C991B00D425006A07B4 /* Dollar.framework in Frameworks */,
-				81199C9A1B00D425006A07B4 /* FutureKit.framework in Frameworks */,
-				81199C9B1B00D425006A07B4 /* Result.framework in Frameworks */,
 				81199C9C1B00D425006A07B4 /* Runes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,10 +373,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Argo.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Box.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Cent.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Dollar.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/FutureKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Runes.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
